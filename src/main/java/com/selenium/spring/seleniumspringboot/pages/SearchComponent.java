@@ -1,5 +1,6 @@
 package com.selenium.spring.seleniumspringboot.pages;
 
+import com.selenium.spring.seleniumspringboot.annotation.PageFragment;
 import com.selenium.spring.seleniumspringboot.base.Base;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -10,9 +11,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Lazy
-@Component
-@Scope("prototype")
+@PageFragment
 public class SearchComponent extends Base {
     @FindBy(name = "q")
     private WebElement searchBox;
